@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b18feuoj7rygj"
+path="res://.godot/imported/combo bell 2 ( when combo reaches a certain number you decide this solid!)2.ogg-a3e0a73c6d749148b76242265a6c8704.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/combo bell 2 ( when combo reaches a certain number you decide this solid!)2.ogg"
+dest_files=["res://.godot/imported/combo bell 2 ( when combo reaches a certain number you decide this solid!)2.ogg-a3e0a73c6d749148b76242265a6c8704.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

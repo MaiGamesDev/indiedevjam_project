@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b114si4svejug"]
+
+[ext_resource type="Texture2D" uid="uid://cxlmddx5u1rda" path="res://art/laserWater.png" id="1_4eph8"]
+[ext_resource type="Script" path="res://scene/effect_trace.gd" id="1_xqid4"]
+
+[node name="effect_trace" type="Line2D"]
+position = Vector2(21, 0)
+scale = Vector2(5.2, 1)
+points = PackedVector2Array(0, 0, 0, 0)
+width = 5.0
+texture = ExtResource("1_4eph8")
+texture_mode = 1
+antialiased = true
+script = ExtResource("1_xqid4")

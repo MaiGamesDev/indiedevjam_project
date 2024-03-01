@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dee6l7054glht"
+path="res://.godot/imported/earth select.ogg-60de98befe752d9174ccb6c0f0f9b310.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/earth select.ogg"
+dest_files=["res://.godot/imported/earth select.ogg-60de98befe752d9174ccb6c0f0f9b310.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

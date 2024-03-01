@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://0fqxpk3300xj"
+path="res://.godot/imported/water shoot 3.ogg-bdfb1bec334c329680e6ce6203641d98.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/water shoot 3.ogg"
+dest_files=["res://.godot/imported/water shoot 3.ogg-bdfb1bec334c329680e6ce6203641d98.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,286 @@
+[gd_scene load_steps=16 format=3 uid="uid://c85l5mt2b2v0h"]
+
+[ext_resource type="Script" path="res://goblins/air_goblin.gd" id="1_kvi8q"]
+[ext_resource type="Texture2D" uid="uid://bgb1hembkmvdr" path="res://art/Wind goblin/damage.png" id="2_a86cg"]
+[ext_resource type="Texture2D" uid="uid://bxmc30iw0wo4v" path="res://art/Wind goblin/idle.png" id="3_jid31"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrg2q"]
+atlas = ExtResource("2_a86cg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c3xtj"]
+atlas = ExtResource("2_a86cg")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l76lk"]
+atlas = ExtResource("3_jid31")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7hiu"]
+atlas = ExtResource("3_jid31")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u5map"]
+atlas = ExtResource("3_jid31")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tretv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrg2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c3xtj")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l76lk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c7hiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u5map")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_18n32"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.02313, 1.02313)]
+}
+
+[sub_resource type="Animation" id="Animation_uuccg"]
+resource_name = "die"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"die"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("sprite:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0.313726)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.7),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lg1am"]
+resource_name = "explode"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.9, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1), Color(100, 100, 100, 1), Color(0.627451, 0, 0.109804, 1)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"explode"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_0ub6l"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sprite:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("sprite:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.139626, 0.139626, -0.139626]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("sprite")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nlhdt"]
+_data = {
+"RESET": SubResource("Animation_18n32"),
+"die": SubResource("Animation_uuccg"),
+"explode": SubResource("Animation_lg1am"),
+"idle": SubResource("Animation_0ub6l")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6cls4"]
+size = Vector2(30, 37)
+
+[node name="enemy" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_kvi8q")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.02313, 1.02313)
+sprite_frames = SubResource("SpriteFrames_tretv")
+animation = &"idle"
+autoplay = "idle"
+offset = Vector2(0, -15)
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nlhdt")
+}
+autoplay = "idle"
+
+[node name="hurtBox" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="hurtBox"]
+position = Vector2(0, -18.5)
+shape = SubResource("RectangleShape2D_6cls4")
+
+[node name="score" type="Label" parent="."]
+visible = false
+offset_left = -20.0
+offset_top = -56.0
+offset_right = 20.0
+offset_bottom = -33.0
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="hurtBox" to="." method="_on_hurt_box_mouse_entered"]
+[connection signal="mouse_exited" from="hurtBox" to="." method="_on_hurt_box_mouse_exited"]

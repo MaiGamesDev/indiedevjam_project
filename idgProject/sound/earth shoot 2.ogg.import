@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://be2m57gprcj8t"
+path="res://.godot/imported/earth shoot 2.ogg-1e5768fbd29228032c0d055667d79afe.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/earth shoot 2.ogg"
+dest_files=["res://.godot/imported/earth shoot 2.ogg-1e5768fbd29228032c0d055667d79afe.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

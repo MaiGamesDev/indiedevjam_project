@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bnjcm1s3bf8ch"
+path="res://.godot/imported/boss bell.mp3-021d65c61e9e4894e533425c32a8ad88.mp3str"
+
+[deps]
+
+source_file="res://sound/boss bell.mp3"
+dest_files=["res://.godot/imported/boss bell.mp3-021d65c61e9e4894e533425c32a8ad88.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

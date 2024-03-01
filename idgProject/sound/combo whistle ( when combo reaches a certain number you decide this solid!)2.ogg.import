@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b8ga5e8ltsjmb"
+path="res://.godot/imported/combo whistle ( when combo reaches a certain number you decide this solid!)2.ogg-f37240a435b0253cbd344ab82528a680.oggvorbisstr"
+
+[deps]
+
+source_file="res://sound/combo whistle ( when combo reaches a certain number you decide this solid!)2.ogg"
+dest_files=["res://.godot/imported/combo whistle ( when combo reaches a certain number you decide this solid!)2.ogg-f37240a435b0253cbd344ab82528a680.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
